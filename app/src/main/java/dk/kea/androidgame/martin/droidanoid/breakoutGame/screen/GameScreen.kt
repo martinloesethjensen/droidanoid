@@ -6,9 +6,9 @@ import android.graphics.Typeface
 import dk.kea.androidgame.martin.droidanoid.breakoutGame.CollisionListener
 import dk.kea.androidgame.martin.droidanoid.breakoutGame.world.World
 import dk.kea.androidgame.martin.droidanoid.breakoutGame.world.WorldRenderer
-import dk.kea.androidgame.martin.droidanoid.engine.core.GameEngine
-import dk.kea.androidgame.martin.droidanoid.engine.core.Screen
-import dk.kea.androidgame.martin.droidanoid.engine.touch.TouchEvent
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.core.GameEngine
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.core.Screen
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.touch.TouchEvent
 
 class GameScreen(gameEngine: GameEngine) : Screen(gameEngine) {
     enum class State {

@@ -1,4 +1,4 @@
-package dk.kea.androidgame.martin.droidanoid.engine.touch
+package dk.kea.androidgame.martin.droidanoid.gameengine.engine.touch
 
 interface TouchHandler {
     fun isTouchDown(pointer: Int): Boolean

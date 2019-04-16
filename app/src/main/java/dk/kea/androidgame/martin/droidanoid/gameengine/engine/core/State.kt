@@ -1,4 +1,4 @@
-package dk.kea.androidgame.martin.droidanoid.engine.core
+package dk.kea.androidgame.martin.droidanoid.gameengine.engine.core
 
 enum class State {
     RUNNING,

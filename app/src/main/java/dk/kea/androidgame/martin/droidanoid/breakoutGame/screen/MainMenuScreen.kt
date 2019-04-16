@@ -1,8 +1,8 @@
 package dk.kea.androidgame.martin.droidanoid.breakoutGame.screen
 
 import android.graphics.Bitmap
-import dk.kea.androidgame.martin.droidanoid.engine.core.GameEngine
-import dk.kea.androidgame.martin.droidanoid.engine.core.Screen
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.core.GameEngine
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.core.Screen
 
 class MainMenuScreen(override val gameEngine: GameEngine) : Screen(gameEngine) {
     private var mainMenu: Bitmap = gameEngine.loadBitmap("breakout/mainmenu.png")

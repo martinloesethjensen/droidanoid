@@ -1,4 +1,4 @@
-package dk.kea.androidgame.martin.droidanoid.engine.core
+package dk.kea.androidgame.martin.droidanoid.gameengine.engine.core
 
 abstract class Screen protected constructor(protected open val gameEngine: GameEngine) {
 

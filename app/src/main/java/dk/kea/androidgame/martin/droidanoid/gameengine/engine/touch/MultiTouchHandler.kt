@@ -1,4 +1,4 @@
-package dk.kea.androidgame.martin.droidanoid.engine.touch
+package dk.kea.androidgame.martin.droidanoid.gameengine.engine.touch
 
 import android.view.MotionEvent
 import android.view.View

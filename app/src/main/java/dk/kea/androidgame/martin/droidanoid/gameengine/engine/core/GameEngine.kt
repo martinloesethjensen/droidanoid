@@ -1,4 +1,4 @@
-package dk.kea.androidgame.martin.droidanoid.engine.core
+package dk.kea.androidgame.martin.droidanoid.gameengine.engine.core
 
 import android.app.Activity
 import android.content.Context
@@ -14,12 +14,12 @@ import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.view.Window
 import android.view.WindowManager
-import dk.kea.androidgame.martin.droidanoid.engine.sound.Music
-import dk.kea.androidgame.martin.droidanoid.engine.sound.Sound
-import dk.kea.androidgame.martin.droidanoid.engine.touch.MultiTouchHandler
-import dk.kea.androidgame.martin.droidanoid.engine.touch.TouchEvent
-import dk.kea.androidgame.martin.droidanoid.engine.touch.TouchEventPool
-import dk.kea.androidgame.martin.droidanoid.engine.touch.TouchHandler
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.sound.Music
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.sound.Sound
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.touch.MultiTouchHandler
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.touch.TouchEvent
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.touch.TouchEventPool
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.touch.TouchHandler
 import java.io.IOException
 import java.io.InputStream
 import java.util.*
@@ -244,10 +244,11 @@ abstract class GameEngine : Activity(), Runnable, TouchHandler, SensorEventListe
                     val canvas = surfaceHolder!!.lockCanvas()
                     // all drawing happens here
                     //canvas.drawColor(Color.rgb(0, 0, 255));
+                    fillEvents()
                     this.currentTime = System.nanoTime()
                     if (screen != null) screen!!.update((this.currentTime - this.lastTime) / 1_000_000_000.0f)
                     this.lastTime = this.currentTime
-                    fillEvents()
+                    freeEvents()
                     source.left = 0
                     source.top = 0
                     source.right = offScreenSurface!!.width - 1
@@ -279,7 +280,6 @@ abstract class GameEngine : Activity(), Runnable, TouchHandler, SensorEventListe
 
     override fun onResume() {
         super.onResume()
-
         if (surfaceView!!.width > surfaceView!!.height) {
             setOffScreenSurface(480, 320)
         } else

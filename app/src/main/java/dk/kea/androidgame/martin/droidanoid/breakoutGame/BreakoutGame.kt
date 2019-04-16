@@ -1,8 +1,8 @@
 package dk.kea.androidgame.martin.droidanoid.breakoutGame
 
 import dk.kea.androidgame.martin.droidanoid.breakoutGame.screen.MainMenuScreen
-import dk.kea.androidgame.martin.droidanoid.engine.core.GameEngine
-import dk.kea.androidgame.martin.droidanoid.engine.core.Screen
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.core.GameEngine
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.core.Screen
 
 class BreakoutGame : GameEngine() {
     override fun createStartScreen(): Screen {

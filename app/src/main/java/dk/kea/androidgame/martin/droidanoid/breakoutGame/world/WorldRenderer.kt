@@ -2,7 +2,7 @@ package dk.kea.androidgame.martin.droidanoid.breakoutGame.world
 
 import android.graphics.Bitmap
 import dk.kea.androidgame.martin.droidanoid.breakoutGame.model.Block
-import dk.kea.androidgame.martin.droidanoid.engine.core.GameEngine
+import dk.kea.androidgame.martin.droidanoid.gameengine.engine.core.GameEngine
 
 
 class WorldRenderer(var gameEngine: GameEngine, var world: World) {
